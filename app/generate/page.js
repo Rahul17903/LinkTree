@@ -1,16 +1,16 @@
 "use client";
-import { useSearchParams } from "next/navigation";
+
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Generate = () => {
-  const searchParams = useSearchParams()
+  
   
   const [links,setLinks] = useState([{link:"",linktext : ""}])
   const [pic,setPic] = useState("")
   const [disc,setDisc] = useState("")
-  const [handle,sethandle] = useState(searchParams.get('handle'))
+  const [handle,sethandle] = useState("")
   
   const submitLinks = async (link, text) => {
     const myHeaders = new Headers();
